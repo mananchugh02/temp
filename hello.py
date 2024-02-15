@@ -8,13 +8,13 @@ def communicate_with_server():
         
         # Create a new circuit
         circuit_id = controller.new_circuit(
-            path=['GuardNode', 'MiddleNode', 'ExitNode'],
+            path=['guard123lol', 'middle123lol', 'exit123lol'],
             await_build=True
         )
         
         # Get the exit node's fingerprint
         with controller.get_network_map() as network_map:
-            exit_fingerprint = network_map.find_router('ExitNode').digest()
+            exit_fingerprint = network_map.find_router('exit123lol').digest()
         
         # Configure the circuit
         controller.set_conf('__LeaveStreamsUnattached', '1')
@@ -24,7 +24,7 @@ def communicate_with_server():
         controller.attach_stream(0, circuit_id)
         
         # Make a request to the server through the Tor network
-        response = requests.get('http://your_server_ip/your_file', proxies={'http': 'socks5h://localhost:9050', 'https': 'socks5h://localhost:9050'})
+        response = requests.get('http://10.0.2.15/temp.html', proxies={'http': 'socks5h://localhost:9050', 'https': 'socks5h://localhost:9050'})
         
         # Print the response
         print(response.text)
