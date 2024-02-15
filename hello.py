@@ -57,7 +57,7 @@ relay_paths = [
     ['guard123lol', 'middle123lol', 'exit123lol'],  # Example path, replace with actual relay fingerprints
 ]
 
-file_url = 'http://10.0.2.15/temp.html'  # Replace with the actual URL of the file to download
+file_url = 'https://drive.google.com/uc?export=download&id=1ORyVVnnc7UfpiLW5_OED2ZAGpsB6oVYP'  # Replace with the actual URL of the file to download
 
 # Download the file through Tor using the specified relay paths
 download_file_through_tor(relay_paths, file_url)
